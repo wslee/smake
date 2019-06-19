@@ -1,4 +1,4 @@
-# smake r1045
+# smake
   a program analysis preparation tool for C programs made with GNU Make
 
 smake observes the build process driven by make(1), and derives the
@@ -12,20 +12,26 @@ You can instantly start your program analysis in three steps:
  3. Use `make` under $AMAKEDIR to analyze your programs.
 
 Usage:
+```
  $ smake --init [<options>]
+```  
   initializes sparrow/ to handle the regular use of smake.
   If you use a special compiler (e.g. cross compiler), its type must be
   specified by appending gcc style options, e.g. `-b mips-linux -V 2.95`.
-
+```
  $ smake --clean
+```  
   completely removes sparrow/.
-
+```
  $ smake <parameters for make>
+```  
   runs `make [<with parameters>]` and bookkeeps $AMAKEDIR.
-
+```
  $ smake ./configure
+```  
   runs `./configure` under the same environment `smake` runs.
-
+```
  $ smake --help
+```  
   shows this message.
 
